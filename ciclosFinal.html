@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">	
+        
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+       
+       <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+        
+        <title>Template html5</title>
+        
+        <style type="text/css" media="screen">
+			.cuadro{
+				width:50px;
+				height:50px;
+				margin:5px;
+				float:left;
+			}
+		</style>
+		
+  
+        
+        
+    </head>
+        
+            <body>            
+            <button onClick="myFunction()">Ejecutar</button>
+            
+            <input type="text" id="numero" value=""></input>
+            
+            <div id="demo"></div>
+
+            
+            <script type="text/javascript" charset="utf-8">
+		 
+		 	colores=["#1abc9c","#2ecc71","#3498db","#9b59b6","#34495e","#16a085","#27ae60","#2980b9","#8e44ad","#2c3e50","#f1c40f","#e67e22","#e74c3c","#ecf0f1","#95a5a6","#f39c12","#d35400","#c0392b","#bdc3c7","#7f8c8d"];
+
+			function myFunction(){
+				
+				numerousuario = document.getElementById("numero").value;
+				for (i= 1; i <= numerousuario; i++){
+					aleatorio = Math.floor(Math.random() * colores.length);
+					
+					jQuery("#demo").append('<div class="cuadro" style="background:' + colores[aleatorio] + '"></div>')
+					}
+		
+			
+			$(".cuadro").mouseenter(function(){
+					$(this).animate({
+						width:"70px",
+						height:"70px",
+					},100)
+			})
+					
+			$(".cuadro").mouseleave(function(){
+					$(this).animate({
+						width:"50px",
+						height:"50px",
+					},100)
+			});
+			
+		};
+
+		 	
+        </script>
+                    
+              
+            
+            </body>
+</html>
